@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tomato Support — Customer Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">🍅</div>
+        <div>
+          <h1>Tomato</h1>
+          <span>Customer Support</span>
+        </div>
+      </div>
+
+      <div class="support-card">
+        <div class="status-dot"></div>
+        <div>
+          <strong>Support is online</strong>
+          <span>Usually replies instantly</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <span class="section-label">Support topics</span>
+        <button class="topic-btn" data-message="I want to track my food order.">
+          <span>📦</span> Order tracking
+        </button>
+        <button class="topic-btn" data-message="I have an issue with my order.">
+          <span>🛍️</span> Order issue
+        </button>
+        <button class="topic-btn" data-message="I want a refund for my order.">
+          <span>💳</span> Refund request
+        </button>
+        <button class="topic-btn" data-message="I want to know about Tomato company policies.">
+          <span>📋</span> Company policy
+        </button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <button id="clearBtn" class="clear-btn">↻ Start new conversation</button>
+        <p>Tomato Support AI<br><span>Powered by your Spring Boot API</span></p>
+      </div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div class="agent">
+          <div class="avatar">🍅</div>
+          <div>
+            <h2>Tomato Support</h2>
+            <div class="online"><span></span> AI Customer Support Executive</div>
+          </div>
+        </div>
+        <div class="header-badge">Food Support</div>
+      </header>
+
+      <section id="messages" class="messages">
+        <div class="message-row bot">
+          <div class="mini-avatar">🍅</div>
+          <div class="message-content">
+            <div class="message-bubble">
+              Hello! How can I assist you today with your food order?
+            </div>
+            <span class="time">Just now</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="typing" id="typing">
+        <span></span><span></span><span></span>
+        <em>Tomato Support is typing...</em>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <input id="messageInput" type="text"
+          placeholder="Describe your order issue..."
+          autocomplete="off" />
+        <button id="sendBtn" type="submit" aria-label="Send message">
+          <span>➤</span>
+        </button>
+      </form>
+
+      <p class="notice">Tomato Support can help with orders, refunds, tracking and company policies.</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
